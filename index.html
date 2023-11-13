@@ -9,13 +9,13 @@
 <body>
 <header> 
     <nav id="navigation">
-          <img class="logo" src="./images/logo.png" style="width: auto; height: 5em" >
-          <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact me</a></li>
-          </ul>
+        <img class="logo" src="./images/logo.png" style="width: auto; height: 5em" >
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Skills</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact me</a></li>
+        </ul>
     </nav>
     <div class="nav-mobile">
       <div id="hamburger-icon" onclick="toggleMobileMenu(this)">
@@ -29,40 +29,52 @@
         </ul>
       </div>
   </div> 
-  <div class="hero">     
-        <div class="hero-content hidden">
-           <h1>Hi, I'm <span>Vilius Caplikas</span></h1>
-           <h2>Junior <span>Front End Developer</span></h2>
-           <p>I am studying and learning every day to become better</p>
-           <div class="social-icons">
-            <a href="#"><ion-icon class="icon" name="logo-linkedin"></ion-icon></a>
-            <a href="#"><ion-icon class="icon" name="logo-github"></ion-icon></a>
-            <a href="#"><ion-icon class="icon" name="logo-discord"></ion-icon></a>
-            <a href="#"><ion-icon class="icon" name="logo-instagram"></ion-icon></a>
-            <a href="#"><ion-icon class="icon" name="logo-twitter"></ion-icon></a>
-          </div>
-        </div>
-        <div class="hero-image">
-           <img src="./images/profile.jpg" alt="Image of the developer">
-        </div>
-    </div> 
 </header>
 
-<section class="skills">
- <div class="skills-title">  
-   <h3>My Skills</h3>
- </div>
-    <div class="skills-container">
-        <div class="skills-box">
-          <img src="./images/html logo.png" alt="image">
-        </div>
-        <div class="skills-box">
-           <img src="./images/css.png" alt="image"> 
-        </div>
-        <div class="skills-box">
-          <img src="./images/js_logo-transformed.png" alt="image">
-        </div>
+<section id="hero-section">
+  <div class="hero">     
+    <div class="hero-content hidden">
+       <h1>Hi, I'm <span>Vilius Caplikas</span></h1>
+       <h2>Junior <span>Front End Developer</span></h2>
+       <p>I am studying and learning every day to become better</p>
+       <div class="social-icons">
+        <a href="#"><ion-icon class="icon" name="logo-linkedin"></ion-icon></a>
+        <a href="#"><ion-icon class="icon" name="logo-github"></ion-icon></a>
+        <a href="#"><ion-icon class="icon" name="logo-discord"></ion-icon></a>
+        <a href="#"><ion-icon class="icon" name="logo-instagram"></ion-icon></a>
+        <a href="#"><ion-icon class="icon" name="logo-twitter"></ion-icon></a>
+      </div>
     </div>
+    <div class="hero-image">
+       <img src="./images/profile.jpg" alt="image">
+    </div>
+</div> 
+</section>
+
+<section id="skills-section">
+ 
+ <div class="heading">  
+   <h3>My <span>Skills</span></h3>
+ </div>
+  
+ <div class="skills-container">
+      <div class="skills-box">
+          <ion-icon class="icon" name="logo-html5"></ion-icon>
+          <h4>HTML</h4>
+      </div>
+      <div class="skills-box">
+        <ion-icon class="icon" name="logo-css3"></ion-icon>
+          <h4>CSS</h4>
+      </div>
+      <div class="skills-box">
+        <ion-icon class="icon" name="logo-javascript"></ion-icon>
+          <h4>JAVASCRIPT</h4>
+      </div>
+      <div class="skills-box">
+        <ion-icon class="icon" name="logo-github"></ion-icon>
+          <h4>GITHUB</h4>
+      </div>
+ </div>
 </section>
   
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
