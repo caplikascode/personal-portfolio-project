@@ -30,32 +30,31 @@ section{
 .nav-mobile a {
     text-decoration: none;
 }
-  
+
 .nav-mobile {
-    /*padding: 0 20px; */
-    height: 50px;
-    display: none;
-    justify-content: right;
+  height: 50px;
+  display: none;
+  justify-content: right;
 }
   
 #hamburger-icon {
-    margin: auto 0;
-    display: none;
-    cursor: pointer;
-    justify-content: right;
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+  justify-content: right;
 }
   
 #hamburger-icon div {
-    width: 40px;
-    height: 3px;
-    background-color: white;
-    margin: 8px 0;
-    transition: 0.4s;
+  width: 40px;
+  height: 3px;
+  background-color: white;
+  margin: 8px 0;
+  transition: 0.4s;
 }
   
 .open .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-    transform: rotate(-45deg) translate(-6px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
 }
   
 .open .bar2 {
@@ -63,20 +62,24 @@ section{
 }
   
 .open .bar3 {
-    -webkit-transform: rotate(45deg) translate(-6px, -8px);
-    transform: rotate(45deg) translate(-6px, -8px);
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
 }
   
 .open .mobile-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 15px;
+  background-color: black;
 }
 
 .open .mobile-menu a {
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
+}
+.open .mobile-menu a:hover{
+  color: aqua;
 }
 
 ul{
@@ -84,12 +87,12 @@ ul{
 }
   
 .mobile-menu {
-    display: none;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    height: calc(100vh - 50px);
-    width: 100%;
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
 }
   
 .mobile-menu li {
@@ -100,21 +103,20 @@ ul{
 
 /* mobile nav end */
 
-nav ul{
+nav  ul{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   float: right;
-  gap: 2rem;
   font-size: 24px;
   margin-right: 90px;
 }
 nav ul li{
   display: inline-block;
   list-style: none;
-  margin: 35px 20px;
+  margin: 35px 35px;
 }
-nav ul li a{
+ ul li a{
   color: #ffff;
   text-decoration: none;
   cursor: pointer;
@@ -143,9 +145,9 @@ nav a:hover::after {
 
 .hero{
   display: flex;
-  max-width: 1200px;
+  align-items: center;
+  justify-content: center;
   margin-top: 10%;
-  margin-left: 12%;
   margin-bottom: 15%;
 }
 
@@ -200,6 +202,9 @@ nav a:hover::after {
   box-shadow: 0 0 1rem #003E78;
   color: #003E78;
 }
+.social-icons a:hover .icon{
+  color: #003E78;
+}
 
 /* Social icon end */
  
@@ -210,36 +215,31 @@ nav a:hover::after {
   flex-direction: column;
   height: 100vh;
 }
-
 .heading{
   font-size: 50px;
   text-align: center;
   margin-bottom: 200px;
 }
-
 .skills-container{
   display: grid;
   grid-template-columns: repeat(4,1fr);
   gap: 6rem;
 }
-
 .skills-box{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   cursor: pointer;
-   transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .skills-box:hover{
   border-radius: 1rem solid;
   transform: scale(1.05)
 }
-
 .skills-box .icon{
   font-size: 10rem;
 }
-
 .skills-box .icon:hover{
   color: #003E78;
 }
@@ -259,37 +259,121 @@ nav a:hover::after {
 }
 /* scroll animations end */
 
-@media only screen and (max-width: 768px) {
-   body{
-    margin: 0;
-    padding: 0;
-   }
+
+@media only screen and (max-width: 1200px) {
+html{
+    font-size: 50%;
+}
+ header{
+    padding: 2rem 5%;
+}
   
-  nav ul{
+nav ul{
     display: none;
   }
 
-  #hamburger-icon {
+.hero-image img {
+    width: 20vw;
+  }
+  
+#hamburger-icon {
     display: block;
   }
+  
+.nav-mobile{
+    display: flex;
+  }
+}
 
-  .nav-mobile{
-      display: flex;
-  }
-  #navigation {
-    width: 100px;
-  }
-  .logo{
+@media only screen and (max-width: 992px) {
+nav ul{
     display: none;
   }
-  .hero-content{
-    margin-top: 50%;
+  
+header{
+    padding: 1.2rem 5%;
+    display: flex;
+    justify-content: space-between;
   }
-  .hero-content h1{
-    font-size: 40px;
+  
+.hero-image img{
+   width: 40vh;
+}
+
+.hero-content{
+    margin-right: 0px;
+}
+.hero-content h1 {
+  font-size: 40px;
+}
+
+.hero{
+  margin-left: 0px;
+  flex-direction: column;
+  margin-bottom: 70%;
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+
+@media only screen and (max-width: 390px) {
+body{
+ margin: 0;
+ padding: 0;
+}
+
+section{
+  padding: 1.2rem 14%;
+}
+  
+nav ul{
+  display: none;
   }
-  .hero-content h2{
-    font-size: 24px;
-  }
- 
+
+#hamburger-icon {
+  display: block;
+}
+
+.nav-mobile{
+  display: flex;
+}
+.logo{
+  display: none;
+}
+
+.hero{
+  margin-left: 0px;
+  flex-direction: column;
+  margin-bottom: 70%;
+}
+.hero-content{
+    margin-right: 0px;
+}
+.hero-image img{
+  width: 35vh;
+}
+
+.hero-content h1{
+  font-size: 25px;
+}
+.hero-content h2{
+  font-size: 20px;
+}
+.hero-content p{
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.social-icons{
+  font-size: 2rem;
+}
+.skills-container{
+  grid-template-columns: 1fr 1fr;
+}
+.heading{
+  margin-bottom: 65px;;
+}
+
 }
