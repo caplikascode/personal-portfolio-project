@@ -567,6 +567,9 @@ section {
 .form-btn{
   font-size: 1.6rem;
 }
+.skills-container{
+  grid-template-columns: 1fr 1fr;
+}
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
