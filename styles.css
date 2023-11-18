@@ -70,7 +70,7 @@ section{
   display: flex;
   flex-direction: column;
   justify-content: left;
-  margin: 15px;
+  margin: 0px 15px 15px 15px;
 }
 
 .open .mobile-menu a {
@@ -88,11 +88,12 @@ ul{
 .mobile-menu {
   display: none;
   position: absolute;
-  top: 50px;
+  top: 0;
   left: 0;
-  /*height: calc(100vh - 50px); without this the background color doesn't leap over the hero section*/ 
+  height: calc(27vh - 50px); 
   width: 100%;
-  background-color: black;
+  background:  rgba(0, 0, 0, 0.8);
+  z-index: 2;
 }
 
 .mobile-menu li {
@@ -250,7 +251,9 @@ nav a:hover::after {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 2rem;
+  margin-bottom: 200px;
 } 
 .snip1577 {
   font-family: 'Montserrat', Arial, sans-
@@ -259,7 +262,9 @@ serif;
   display: inline-block;
   overflow: hidden;
   margin: 10px;
-  min-width: 230px;
+  max-width: 300px;
+  max-height: 500px;
+  height: 100%;
   width: 100%;
   color: #fff;
   text-align: left;
@@ -379,8 +384,113 @@ serif;
   transition-delay: 0.35s;
 }
 
-
 /* My projects section end */
+
+
+
+/* Footer section start */
+ 
+/* Start Contact Section */
+.contact {
+  padding: 2rem 10%;
+	background:  rgba(0, 0, 0, 0.5);;
+}
+.contact .special-heading{
+  text-align: center;
+  margin-bottom: 100px;
+}
+.contact p{
+  font-size: 50px;
+}
+.contact-info {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+.contact-me .contact-me-title,
+.contact-form .form-title {
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	font-weight: 500;
+	color: white;
+}
+
+.contact-me .contact-me-info {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.contact-me .contact-me-info li {
+	line-height: 2;
+	font-size: 1.2rem;
+	color: white;
+}
+.contact-me-info ion-icon{
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.contact-me .contact-me-info li i {
+	color: white;
+	margin-right: 0.5rem;
+	font-size: 1.1rem;
+}
+.contact-form input,
+.contact-form textarea {
+	outline: none;
+	border: 2px solid white;
+	color: black;
+	padding: 1.5rem 2rem;
+	border-radius: 0.3rem;
+}
+.contact-form .form-input {
+	display: flex;
+  justify-content: space-between;
+	margin: 2rem 0;
+}
+.contact-form .form-input input {
+	height: 45px;
+}
+.contact-form textarea {
+	width: 100%;
+}
+.form-btn {
+	display: flex;
+	justify-content: center;
+	margin: 1.5rem auto 0;
+	padding: 1rem 2rem;
+	border: none;
+	color: black;
+	background: white;
+	font-size: 1.1rem;
+	text-transform: capitalize;
+	border-radius: 2rem;
+	cursor: pointer;
+	transition: all var(--main-duration);
+}
+.form-btn:hover {
+	background: #007df1;
+	box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* End Contact Section */
+
+/* Start Footer Section */
+
+footer {
+	padding: 3rem 0;
+  background:  rgba(0, 0, 0, 0.5);
+}
+footer .container {
+	display: flex;
+	justify-content: center;
+}
+
+/* End Footer Section */
+
 
 
 /* scroll animations start */
@@ -396,8 +506,28 @@ serif;
   transform: translateX(0);
   filter: blur(0);
 }
+
 /* scroll animations end */
 
+
+
+
+@media (min-width: 1200px) {
+	.contact-me {
+		flex-basis: 25%;
+	}
+	.contact-form {
+		flex-basis: 72%;
+	}
+	.contact-form .form-input input {
+		flex-basis: 48%;
+	}
+  .contact-me .contact-me-info li {
+    line-height: 2;
+    font-size: 1.1rem; 
+    color: white;
+  }
+} 
 
 @media only screen and (max-width: 1200px) {
 html{
@@ -422,7 +552,58 @@ nav ul{
 .logo{
   width: 220px;
 }
+.contact-me {
+  flex-basis: 25%;
 }
+.contact-form {
+  flex-basis: 72%;
+}
+.contact-form .form-input input {
+  flex-basis: 48%;
+}
+section {
+  padding: 1rem 10%;
+}
+.form-btn{
+  font-size: 1.6rem;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+	.contact-me {
+		flex-basis: 35%;
+	}
+	.contact-form {
+		flex-basis: 60%;
+	}
+	.contact-form .form-input {
+		flex-direction: column;
+	}
+	.contact-form .form-input input {
+		flex-basis: 100%;
+		padding: 1.2rem 1rem;
+	}
+	.contact-form .form-input input:first-child {
+		margin-bottom: 1rem;
+	}
+  #skills-section{
+    height: 70vh;
+  }
+}
+
+/* this could me merged together with the 992px media query */
+@media (max-width: 991px) {  
+	footer .container {
+		flex-direction: column;
+	}
+	.footer-info {
+		text-align: center;
+	}
+	.footer-list {
+		justify-content: center;
+		margin-top: 1rem;
+	}
+} 
 
 @media only screen and (max-width: 992px) {
 nav ul{
@@ -438,26 +619,73 @@ header{
 .hero-image img{
    width: 40vh;
 }
-
 .hero-content{
     margin-right: 0px;
 }
 .hero-content h1 {
   font-size: 40px;
 }
-
 .hero{
   margin-left: 0px;
   flex-direction: column;
 }
+.contact{
+  padding: 10rem 7%;
+}
+.contact-me .contact-me-title {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+.contact-me .contact-me-info li{
+  font-size: 1.5rem;
+}
+.contact-me .contact-me-title, .contact-form .form-title {
+  font-size: 2rem;
+}
+.social-icons{
+  font-size: 2.2rem;
+}
+.snip1577 {
+  margin: 10px;
+  max-width: 400px;
+  max-height: 500px;
+  height: 100%;
+  width: 100%;
+}
 
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 767px) {
+	.contact-info {
+		flex-direction: column-reverse;
+	}
+	.contact-me {
+		margin-top: 3rem;
+	}
+	.contact-me,
+	.contact-form {
+		text-align: center;
+		flex-basis: 100%;
+	}
+	.contact-form .form-input {
+		flex-direction: column;
+	}
+	.contact-form .form-input input {
+		flex-basis: 100%;
+		padding: 1rem;
+	}
+	.contact-form .form-input input:first-child {
+		margin-bottom: 1rem;
+	}
+  .footer-info {
+    text-align: center;
+    font-size: 1.7rem;
+}
 
 }
 
 @media only screen and (max-width: 390px) {
+
 body{
  margin: 0;
  padding: 0;
@@ -469,7 +697,10 @@ section{
   
 nav ul{
   display: none;
-  }
+}
+header{
+  height: 15vh;
+}
 
 #hamburger-icon {
   display: block;
@@ -511,7 +742,23 @@ nav ul{
   grid-template-columns: 1fr 1fr;
 }
 .heading{
-  margin-bottom: 65px;;
+  margin-bottom: 100px;;
 }
-
+.snip1577 {
+  max-width: 500px;
+  max-height: 300px;
+}
+#skills-section{
+  height: 60vh;
+  margin-bottom: 120px;
+}
+.contact{
+  padding: 1.2rem 14%
+}
+.contact .special-heading {
+  margin-top: 40px
+}
+.form-btn{
+  font-size: 1.6rem;
+}
 }
